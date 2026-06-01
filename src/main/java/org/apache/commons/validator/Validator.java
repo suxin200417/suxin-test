@@ -58,7 +58,7 @@ public class Validator implements Serializable {
         this.classLoader = null;
         this.useContextClassLoader = false;
         this.onlyReturnErrors = false;
-        if (resources != null) {    //将 “==” 改成了 ”！=“
+        if (resources == null) {    //将 “==” 改成了 ”！=“
             throw new IllegalArgumentException("Resources cannot be null.");
         } else {
             this.resources = resources;
